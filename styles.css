@@ -1,129 +1,106 @@
-/* General styles */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f4f8;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* General body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-/* Header styles */
-header {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+    /* Quiz container styles */
+    .quiz-container {
+      background: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      padding: 20px;
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+    }
 
-.header-controls {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
+    .quiz-container h1 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
 
-input[type="text"] {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 30%;
-}
+    .level, .points {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
-}
+    .question {
+      font-size: 1.2em;
+      margin: 20px 0;
+      padding: 10px;
+      background: #f9fafb;
+      border-radius: 8px;
+    }
 
-button:hover {
-  background-color: #45a049;
-}
+    .options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
 
-/* Main container */
-.main-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  margin-top: 20px;
-  max-width: 1200px;
-  width: 100%;
-}
+    @media (min-width: 600px) {
+      .options {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
 
-/* Prayer times container */
-.left-container, .right-container {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+    .option {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #e0e0e0;
+      transition: background-color 0.3s ease;
+    }
 
-.prayer-time {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 15px;
-  border-bottom: 1px solid #ddd;
-}
+    .option:hover {
+      background-color: #d6d6d6;
+    }
 
-.prayer-time:last-child {
-  border-bottom: none;
-}
+    .option.correct {
+      background-color: #4caf50;
+      color: white;
+    }
 
-.upcoming-prayer {
-  margin-top: 20px;
-  background-color: #e3fcef;
-  padding: 15px;
-  border-radius: 5px;
-  text-align: center;
-  font-weight: bold;
-}
+    .option.wrong {
+      background-color: #f44336;
+      color: white;
+    }
 
-.countdown {
-  margin-top: 10px;
-  color: red;
-  font-size: 1.2rem;
-  text-align: center;
-  animation: heartbeat 2s ease-in-out infinite;
-}
+    .hint-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 20px 0;
+    }
 
-/* Heartbeat animation */
-@keyframes heartbeat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
+    .hint-button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      color: white;
+      background-color: #2196f3;
+      transition: background-color 0.3s ease;
+    }
 
-/* Footer */
-footer {
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-}
+    .hint-button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
 
-/* Responsive design */
-@media (min-width: 768px) {
-  .main-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .left-container, .right-container {
-    width: 48%;
-  }
-}
+    footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #777;
+    }
