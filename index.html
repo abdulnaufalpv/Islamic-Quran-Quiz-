@@ -3,58 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prayer Times App</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Quran Quiz</title>
+  
 </head>
 <body>
-  <header>
-    <h1 class="title">Prayer Times</h1>
-    <div class="header-controls">
-      <button id="get-location">Auto</button>
-      <input type="text" id="search-location" placeholder="Enter city name">
-      <button id="search-location-btn">Go</button>
+  <div class="quiz-container">
+    <h1>Quran Quiz</h1>
+    <div class="level">Level: 1 - Question: 1</div>
+    <div class="points">Total Points: 0</div>
+    <div class="question">Loading question...</div>
+    <div class="options"></div>
+    <div class="hint-buttons">
+      <button class="hint-button" disabled>Use Hint (-3 Points)</button>
+      <button class="hint-button" disabled>Reveal Ayah (-5 Points)</button>
     </div>
-  </header>
+  </div>
+  <footer>Quran Quiz App © 2025</footer>
 
-  <main class="main-container">
-    <section class="left-container" id="prayer-times-container">
-      <div class="prayer-time" id="fajr-time">
-        <span>Fajr</span><span id="fajr-time-value">Loading...</span>
-      </div>
-      <div class="prayer-time" id="sunrise-time">
-        <span>Sunrise</span><span id="sunrise-time-value">Loading...</span>
-      </div>
-      <div class="prayer-time" id="dhuhr-time">
-        <span>Dhuhr</span><span id="dhuhr-time-value">Loading...</span>
-      </div>
-      <div class="prayer-time" id="asr-time">
-        <span>Asr</span><span id="asr-time-value">Loading...</span>
-      </div>
-      <div class="prayer-time" id="maghrib-time">
-        <span>Maghrib</span><span id="maghrib-time-value">Loading...</span>
-      </div>
-      <div class="prayer-time" id="isha-time">
-        <span>Isha</span><span id="isha-time-value">Loading...</span>
-      </div>
-      <div class="prayer-time" id="jumma-time">
-        <span>Jumma</span><span id="jumma-time-value">Loading...</span>
-      </div>
-    </section>
 
-    <section class="right-container">
-      <div id="current-time"></div>
-      <div id="current-date-time"></div>
-      <div id="location-name"></div>
-      <div id="location-link"></div>
-      <div class="upcoming-prayer" id="next-prayer">Next Prayer: Loading...</div>
-      <div class="countdown" id="countdown">Countdown: <span id="countdown-time">00:00:00</span></div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Prayer Times App</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
